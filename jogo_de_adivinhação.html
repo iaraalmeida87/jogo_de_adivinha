@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <meta charset="UTF-8">
 <input/>
 <button>Compare com o meu segredo</button>
@@ -12,11 +13,11 @@
 
             while(numero <= quantidade) {
                 let numeroAleatorio = sorteia();
-                let achou = false;
-
+                
                 if (numeroAleatorio !== 0) {
+                    let achou = false;
                     for(let posicao = 0; posicao < segredos.length; posicao++) {
-                        if(segredos[posicao] == numeroAleatorio){
+                        if(segredos[posicao] == numeroAleatorio) {
                             achou = true;
                             break;
                         }
@@ -30,6 +31,9 @@
             return segredos;
         }
         let segredos = sorteiaNumeros(3);
+        
+        console.log(segredos);
+        
         let input = document.querySelector("input");
         input.focus();
 
@@ -48,6 +52,6 @@
         input.value = "";
         input.focus();
         }
-        const button = document.querySelector("button");
+        let button = document.querySelector("button");
         button.onclick = verifica;
     </script>
