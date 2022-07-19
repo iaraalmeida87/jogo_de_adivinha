@@ -7,15 +7,15 @@
         }
         function sorteiaNumeros(quantidade) {
 
-            var segredos = [];
-            var numero = 1;
+            let segredos = [];
+            let numero = 1;
 
             while(numero <= quantidade) {
-                var numeroAleatorio = sorteia();
-                var achou = false;
+                let numeroAleatorio = sorteia();
+                let achou = false;
 
                 if (numeroAleatorio !== 0) {
-                    for(var posicao = 0; posicao < segredos.length; posicao++) {
+                    for(let posicao = 0; posicao < segredos.length; posicao++) {
                         if(segredos[posicao] == numeroAleatorio){
                             achou = true;
                             break;
@@ -29,13 +29,13 @@
             }
             return segredos;
         }
-        var segredos = sorteiaNumeros(3);
-        var input = document.querySelector("input");
+        let segredos = sorteiaNumeros(3);
+        let input = document.querySelector("input");
         input.focus();
 
         function verifica() {
-            var achou = false;
-            for(var posicao = 0; posicao < segredos.length; posicao++) {
+            let achou = false;
+            for(let posicao = 0; posicao < segredos.length; posicao++) {
                 if(input.value == segredos[posicao]) {
                     alert("Você ACERTOU!");
                     achou = true;
@@ -48,6 +48,6 @@
         input.value = "";
         input.focus();
         }
-        var button = document.querySelector("button");
+        const button = document.querySelector("button");
         button.onclick = verifica;
     </script>
